@@ -1,0 +1,29 @@
+# Node modules (all folders)
+node_modules/
+
+# Env files
+.env
+backend/.env
+frontend/.env
+admin/.env
+
+# Build / dist output
+dist/
+build/
+frontend/build/
+frontend/dist/
+admin/build/
+admin/dist/
+backend/dist/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# System / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
