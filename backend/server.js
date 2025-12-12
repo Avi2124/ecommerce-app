@@ -16,10 +16,14 @@ connectCloudinary()
 
 // CORS FIX FOR VERCEL 
 app.use(cors({
-  origin: "https://ecommerce-frontend-taupe-sigma.vercel.app",
+  origin: [
+    "https://ecommerce-frontend-taupe-sigma.vercel.app",
+    "https://ecommerce-app-admin-mocha.vercel.app"
+  ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 }));
+
 
 
 // Middlewares
