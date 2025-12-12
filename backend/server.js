@@ -28,6 +28,7 @@ app.use(cors({
 
 // Middlewares
 app.use(express.json());
+app.options("*", cors());
 // app.use(cors())
 app.use('/api/cart', cartRouter)
 app.use('/api/order', orderRouter)
