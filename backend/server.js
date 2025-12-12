@@ -14,6 +14,13 @@ const port = process.env.PORT || 1213
 connectDB()
 connectCloudinary()
 
+// CORS FIX FOR VERCEL 
+app.use(cors({
+    origin: "https://ecommerce-frontend-gamma-five.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+}));
+
 // Middlewares
 app.use(express.json());
 app.use(cors())
