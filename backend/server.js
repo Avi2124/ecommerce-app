@@ -21,8 +21,7 @@ app.use(cors({
     "https://ecommerce-app-admin-mocha.vercel.app"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 
