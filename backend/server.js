@@ -20,27 +20,21 @@ app.use(cors({
     "https://ecommerce-frontend-taupe-sigma.vercel.app",
     "https://ecommerce-app-admin-mocha.vercel.app"
   ],
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
 }));
+
+
 
 // Middlewares
 app.use(express.json());
+app.use(cors())
 app.use('/api/cart', cartRouter)
 app.use('/api/order', orderRouter)
 
 // API Endpoints
 app.use('/api/user', userRouter)
 app.use('/api/product',productRouter)
-
-app.options('*', cors({
-  origin: [
-    "https://ecommerce-frontend-taupe-sigma.vercel.app",
-    "https://ecommerce-app-admin-mocha.vercel.app"
-  ],
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
 
 app.get('/', (req, res) => {
     res.send("API Working")
